@@ -53,7 +53,7 @@ class LasingOffReference(object):
 
     def __init__(self,
             experiment='amoc8114',  #Experiment label
-            max_shots=401,           #Maximum number of valid shots to process
+            max_shots=1401,         #Maximum number of valid shots to process
             run_number='86',        #Run number
             start_image=0,          #Starting image in run
             validity_range=None,
