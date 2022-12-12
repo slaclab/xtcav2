@@ -17,6 +17,7 @@ import collections
 from . import SplittingUtils as su
 from . import ClusteringUtils as cu
 import collections
+import os
 
 
 def getImageStatistics(image, ROI):
@@ -226,7 +227,10 @@ def calculatePhyscialUnits(ROI, center, shot_to_shot, global_calibration):
     #If the cosine of phase was too close to 0, we return warning and error
     if np.abs(cosphasediff) < 0.5:
         warnings.warn_explicit('The phase of the bunch with the RF field is far from 0 or 180 degrees',UserWarning,'XTCAV',0)
-        valid=0
+        if os.getenv('XTCAV_IGNORE_PHASE_WARNING'):
+            warnings.warn_explicit('Ignoring phase problem since XTCAV_IGNORE_PHASE_WARNING env var is set',UserWarning,'XTCAV',0)
+        else:
+            valid=0
 
     signflip = np.sign(cosphasediff); #It may need to be flipped depending on the phase
 
