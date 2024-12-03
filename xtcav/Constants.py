@@ -14,11 +14,11 @@ ROI_START_X_names = ['XTCAV_ROI_startX', 'ROI_X_Offset', 'OTRS:DMP1:695:MinX']
 ROI_START_Y_names = ['XTCAV_ROI_startY', 'ROI_Y_Offset', 'OTRS:DMP1:695:MinY']
 
 
-UM_PER_PIX_names = ['XTCAV_calib_umPerPx','OTRS:DMP1:695:RESOLUTION']
-STR_STRENGTH_names = ['XTCAV_strength_par_S','Streak_Strength','OTRS:DMP1:695:TCAL_X']
+UM_PER_PIX_names = ['XTCAV_calib_umPerPx','OTRS:DMPH:695:RESOLUTION']
+STR_STRENGTH_names = ['XTCAV_strength_par_S','Streak_Strength','OTRS:DMPH:695:TCAL_X']
 RF_AMP_CALIB_names = ['XTCAV_Amp_Des_calib_MV','XTCAV_Cal_Amp','SIOC:SYS0:ML01:AO214']
 RF_PHASE_CALIB_names = ['XTCAV_Phas_Des_calib_deg','XTCAV_Cal_Phase','SIOC:SYS0:ML01:AO215']
-DUMP_E_names = ['XTCAV_Beam_energy_dump_GeV','Dump_Energy','REFS:DMP1:400:EDES']
+DUMP_E_names = ['XTCAV_Beam_energy_dump_GeV','Dump_Energy','REFS:DMPH:400:EDES']
 DUMP_DISP_names = ['XTCAV_calib_disp_posToEnergy','Dump_Disp','SIOC:SYS0:ML01:AO216']
 """
 End Detector Names
