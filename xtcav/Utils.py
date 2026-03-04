@@ -200,12 +200,12 @@ def findROI(masks, ROI, expandfactor=1):
     widthx = (xmax - xmin +1)*expandfactor
     centerx = old_div((xmax + xmin +1),2)
 
-    ind1Y = max(0, np.round(centery - old_div(widthy,2)).astype(np.int))
-    ind2Y = min(np.round(centery + old_div(widthy,2)).astype(np.int), rows.size)
-    ind1X = max(0, np.round(centerx - old_div(widthx,2)).astype(np.int))
-    ind2X = min(np.round(centerx + old_div(widthx,2)).astype(np.int), cols.size)
-                
-    #Output ROI in terms of the input ROI            
+    ind1Y = max(0, np.round(centery - old_div(widthy,2)).astype(np.int32))
+    ind2Y = min(np.round(centery + old_div(widthy,2)).astype(np.int32), rows.size)
+    ind1X = max(0, np.round(centerx - old_div(widthx,2)).astype(np.int32))
+    ind2X = min(np.round(centerx + old_div(widthx,2)).astype(np.int32), cols.size)
+
+    #Output ROI in terms of the input ROI
     outROI = ROIMetrics(ind2X-ind1X+1, 
         ROI.x0+ind1X, 
         ind2Y-ind1Y+1, 
