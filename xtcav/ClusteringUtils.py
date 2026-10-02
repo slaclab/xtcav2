@@ -76,7 +76,7 @@ def hierarchicalClustering(X, num_clusters, distance='euclidean'):
     wrapper function for sklearn agglomerative clustering algorithm
     """
     linkage = 'ward' if distance == 'euclidean' else 'average'
-    model = AgglomerativeClustering(n_clusters=num_clusters, linkage=linkage, affinity=distance)
+    model = AgglomerativeClustering(n_clusters=num_clusters, linkage=linkage)
     model.fit(X)
     return model.labels_
 
